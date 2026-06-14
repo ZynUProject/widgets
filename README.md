@@ -1,6 +1,6 @@
 # @zynu/widgets
 
-Embeddable video player and subscribe button for the [ZynU](https://zynu.net) platform.
+Embeddable video player and subscribe button for the ZynU platform.
 
 ![license](https://img.shields.io/badge/license-MIT-blue)
 ![build](https://img.shields.io/badge/build-passing-brightgreen)
@@ -56,4 +56,4 @@ npm install @zynu/widgets
 
 ## License
 
-MIT © [ZynU](https://zynu.net)
+MIT © ZynU
