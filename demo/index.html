@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZynU Widgets — Demo</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, sans-serif; background: #0a0b14; color: #e0eeff; padding: 40px; }
+    h1 { color: #1a56ff; margin-bottom: 8px; }
+    p { color: #6a7aaa; margin-bottom: 32px; font-size: 14px; }
+    .section { margin-bottom: 48px; }
+    h2 { font-size: 16px; color: #c4d8ff; margin-bottom: 16px; }
+    .player-wrap { width: 640px; height: 360px; max-width: 100%; background: #000; }
+    pre { background: #0e1224; border: 1px solid #1a2040; padding: 16px; font-size: 13px;
+          color: #7dd3fc; border-radius: 4px; overflow-x: auto; margin-top: 16px; }
+  </style>
+</head>
+<body>
+  <h1>ZynU Widgets</h1>
+  <p>Embeddable video player and subscribe button for the ZynU platform.</p>
+
+  <div class="section">
+    <h2>Video Player</h2>
+    <div id="zynu-player" class="player-wrap"></div>
+    <pre>&lt;div id="zynu-player" style="width:640px;height:360px"&gt;&lt;/div&gt;
+
+&lt;script type="module"&gt;
+  import { createPlayer } from "@zynu/widgets";
+
+  createPlayer({
+    containerId: "zynu-player",
+    videoId: "demo-video-id",
+    autoplay: false,
+    theme: "dark",
+    onReady: () => console.log("Player ready"),
+    onPlay:  () => console.log("Playing"),
+  });
+&lt;/script&gt;</pre>
+  </div>
+
+  <div class="section">
+    <h2>Subscribe Button</h2>
+    <div id="zynu-subscribe"></div>
+    <pre>&lt;div id="zynu-subscribe"&gt;&lt;/div&gt;
+
+&lt;script type="module"&gt;
+  import { createSubscribeButton } from "@zynu/widgets";
+
+  createSubscribeButton({
+    containerId: "zynu-subscribe",
+    channelId: "channel-id",
+    apiKey: "zynu_your_api_key",
+    size: "md",
+  });
+&lt;/script&gt;</pre>
+  </div>
+
+  <script type="module" src="../src/embed/index.ts"></script>
+</body>
+</html>
